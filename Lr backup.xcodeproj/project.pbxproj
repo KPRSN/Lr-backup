@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBEC642A1B761C36006CB913 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC64291B761C36006CB913 /* AppDelegate.swift */; };
+		CBEC642C1B761C36006CB913 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEC642B1B761C36006CB913 /* Images.xcassets */; };
+		CBEC642F1B761C36006CB913 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC642D1B761C36006CB913 /* MainMenu.xib */; };
+		CBEC643B1B761C36006CB913 /* Lr_backupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC643A1B761C36006CB913 /* Lr_backupTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBEC64351B761C36006CB913 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBEC641C1B761C36006CB913 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBEC64231B761C36006CB913;
+			remoteInfo = "Lr backup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBEC64241B761C36006CB913 /* Lr backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lr backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEC64281B761C36006CB913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEC64291B761C36006CB913 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBEC642B1B761C36006CB913 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBEC642E1B761C36006CB913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CBEC64341B761C36006CB913 /* Lr backupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lr backupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEC64391B761C36006CB913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEC643A1B761C36006CB913 /* Lr_backupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lr_backupTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBEC64211B761C36006CB913 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC64311B761C36006CB913 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBEC641B1B761C36006CB913 = {
+			isa = PBXGroup;
+			children = (
+				CBEC64261B761C36006CB913 /* Lr backup */,
+				CBEC64371B761C36006CB913 /* Lr backupTests */,
+				CBEC64251B761C36006CB913 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBEC64251B761C36006CB913 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC64241B761C36006CB913 /* Lr backup.app */,
+				CBEC64341B761C36006CB913 /* Lr backupTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBEC64261B761C36006CB913 /* Lr backup */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC64291B761C36006CB913 /* AppDelegate.swift */,
+				CBEC642B1B761C36006CB913 /* Images.xcassets */,
+				CBEC642D1B761C36006CB913 /* MainMenu.xib */,
+				CBEC64271B761C36006CB913 /* Supporting Files */,
+			);
+			path = "Lr backup";
+			sourceTree = "<group>";
+		};
+		CBEC64271B761C36006CB913 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC64281B761C36006CB913 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBEC64371B761C36006CB913 /* Lr backupTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC643A1B761C36006CB913 /* Lr_backupTests.swift */,
+				CBEC64381B761C36006CB913 /* Supporting Files */,
+			);
+			path = "Lr backupTests";
+			sourceTree = "<group>";
+		};
+		CBEC64381B761C36006CB913 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC64391B761C36006CB913 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBEC64231B761C36006CB913 /* Lr backup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBEC643E1B761C36006CB913 /* Build configuration list for PBXNativeTarget "Lr backup" */;
+			buildPhases = (
+				CBEC64201B761C36006CB913 /* Sources */,
+				CBEC64211B761C36006CB913 /* Frameworks */,
+				CBEC64221B761C36006CB913 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lr backup";
+			productName = "Lr backup";
+			productReference = CBEC64241B761C36006CB913 /* Lr backup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBEC64331B761C36006CB913 /* Lr backupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBEC64411B761C36006CB913 /* Build configuration list for PBXNativeTarget "Lr backupTests" */;
+			buildPhases = (
+				CBEC64301B761C36006CB913 /* Sources */,
+				CBEC64311B761C36006CB913 /* Frameworks */,
+				CBEC64321B761C36006CB913 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBEC64361B761C36006CB913 /* PBXTargetDependency */,
+			);
+			name = "Lr backupTests";
+			productName = "Lr backupTests";
+			productReference = CBEC64341B761C36006CB913 /* Lr backupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBEC641C1B761C36006CB913 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Karl Persson";
+				TargetAttributes = {
+					CBEC64231B761C36006CB913 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CBEC64331B761C36006CB913 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = CBEC64231B761C36006CB913;
+					};
+				};
+			};
+			buildConfigurationList = CBEC641F1B761C36006CB913 /* Build configuration list for PBXProject "Lr backup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBEC641B1B761C36006CB913;
+			productRefGroup = CBEC64251B761C36006CB913 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBEC64231B761C36006CB913 /* Lr backup */,
+				CBEC64331B761C36006CB913 /* Lr backupTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBEC64221B761C36006CB913 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBEC642C1B761C36006CB913 /* Images.xcassets in Resources */,
+				CBEC642F1B761C36006CB913 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC64321B761C36006CB913 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBEC64201B761C36006CB913 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBEC642A1B761C36006CB913 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC64301B761C36006CB913 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBEC643B1B761C36006CB913 /* Lr_backupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBEC64361B761C36006CB913 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBEC64231B761C36006CB913 /* Lr backup */;
+			targetProxy = CBEC64351B761C36006CB913 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBEC642D1B761C36006CB913 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBEC642E1B761C36006CB913 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBEC643C1B761C36006CB913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBEC643D1B761C36006CB913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CBEC643F1B761C36006CB913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Lr backup/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBEC64401B761C36006CB913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Lr backup/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CBEC64421B761C36006CB913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lr backupTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lr backup.app/Contents/MacOS/Lr backup";
+			};
+			name = Debug;
+		};
+		CBEC64431B761C36006CB913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lr backupTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lr backup.app/Contents/MacOS/Lr backup";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBEC641F1B761C36006CB913 /* Build configuration list for PBXProject "Lr backup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEC643C1B761C36006CB913 /* Debug */,
+				CBEC643D1B761C36006CB913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBEC643E1B761C36006CB913 /* Build configuration list for PBXNativeTarget "Lr backup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEC643F1B761C36006CB913 /* Debug */,
+				CBEC64401B761C36006CB913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBEC64411B761C36006CB913 /* Build configuration list for PBXNativeTarget "Lr backupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEC64421B761C36006CB913 /* Debug */,
+				CBEC64431B761C36006CB913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBEC641C1B761C36006CB913 /* Project object */;
+}
