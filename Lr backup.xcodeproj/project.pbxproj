@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBB5352D1B77BC7400B70FD6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5352C1B77BC7400B70FD6 /* Logger.swift */; };
+		CBB535321B7A1BBE00B70FD6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB535301B7A1BBE00B70FD6 /* Preferences.swift */; };
+		CBB535331B7A1BBE00B70FD6 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB535311B7A1BBE00B70FD6 /* Preferences.xib */; };
+		CBB5353F1B7A2CC700B70FD6 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5353D1B7A2CC700B70FD6 /* PreferencesViewController.swift */; };
+		CBB535401B7A2CC700B70FD6 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB5353E1B7A2CC700B70FD6 /* PreferencesViewController.xib */; };
+		CBB535431B7A316100B70FD6 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB535411B7A316100B70FD6 /* LogViewController.swift */; };
+		CBB535441B7A316100B70FD6 /* LogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB535421B7A316100B70FD6 /* LogViewController.xib */; };
+		CBB535461B7BC36A00B70FD6 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB535451B7BC36A00B70FD6 /* Defaults.swift */; };
+		CBB5354A1B7BCA9700B70FD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB535491B7BCA9700B70FD6 /* Extensions.swift */; };
+		CBB535501B86509B00B70FD6 /* RsyncTaskGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5354F1B86509B00B70FD6 /* RsyncTaskGenerator.swift */; };
 		CBEC642A1B761C36006CB913 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC64291B761C36006CB913 /* AppDelegate.swift */; };
 		CBEC642C1B761C36006CB913 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEC642B1B761C36006CB913 /* Images.xcassets */; };
 		CBEC642F1B761C36006CB913 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC642D1B761C36006CB913 /* MainMenu.xib */; };
 		CBEC643B1B761C36006CB913 /* Lr_backupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC643A1B761C36006CB913 /* Lr_backupTests.swift */; };
+		CBEC644C1B767230006CB913 /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC644B1B767230006CB913 /* Backup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +35,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CBB5352C1B77BC7400B70FD6 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		CBB535301B7A1BBE00B70FD6 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		CBB535311B7A1BBE00B70FD6 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		CBB5353D1B7A2CC700B70FD6 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		CBB5353E1B7A2CC700B70FD6 /* PreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesViewController.xib; sourceTree = "<group>"; };
+		CBB535411B7A316100B70FD6 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		CBB535421B7A316100B70FD6 /* LogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogViewController.xib; sourceTree = "<group>"; };
+		CBB535451B7BC36A00B70FD6 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		CBB535491B7BCA9700B70FD6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CBB5354F1B86509B00B70FD6 /* RsyncTaskGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RsyncTaskGenerator.swift; sourceTree = "<group>"; };
 		CBEC64241B761C36006CB913 /* Lr backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lr backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEC64281B761C36006CB913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBEC64291B761C36006CB913 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +53,7 @@
 		CBEC64341B761C36006CB913 /* Lr backupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lr backupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEC64391B761C36006CB913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBEC643A1B761C36006CB913 /* Lr_backupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lr_backupTests.swift; sourceTree = "<group>"; };
+		CBEC644B1B767230006CB913 /* Backup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +74,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CBB5353C1B7A23EB00B70FD6 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				CBB535301B7A1BBE00B70FD6 /* Preferences.swift */,
+				CBB535311B7A1BBE00B70FD6 /* Preferences.xib */,
+				CBB5353D1B7A2CC700B70FD6 /* PreferencesViewController.swift */,
+				CBB5353E1B7A2CC700B70FD6 /* PreferencesViewController.xib */,
+				CBB535411B7A316100B70FD6 /* LogViewController.swift */,
+				CBB535421B7A316100B70FD6 /* LogViewController.xib */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
 		CBEC641B1B761C36006CB913 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +109,12 @@
 			isa = PBXGroup;
 			children = (
 				CBEC64291B761C36006CB913 /* AppDelegate.swift */,
+				CBEC644B1B767230006CB913 /* Backup.swift */,
+				CBB5354F1B86509B00B70FD6 /* RsyncTaskGenerator.swift */,
+				CBB5352C1B77BC7400B70FD6 /* Logger.swift */,
+				CBB535451B7BC36A00B70FD6 /* Defaults.swift */,
+				CBB535491B7BCA9700B70FD6 /* Extensions.swift */,
+				CBB5353C1B7A23EB00B70FD6 /* Preferences */,
 				CBEC642B1B761C36006CB913 /* Images.xcassets */,
 				CBEC642D1B761C36006CB913 /* MainMenu.xib */,
 				CBEC64271B761C36006CB913 /* Supporting Files */,
@@ -187,7 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEC642C1B761C36006CB913 /* Images.xcassets in Resources */,
+				CBB535331B7A1BBE00B70FD6 /* Preferences.xib in Resources */,
+				CBB535441B7A316100B70FD6 /* LogViewController.xib in Resources */,
 				CBEC642F1B761C36006CB913 /* MainMenu.xib in Resources */,
+				CBB535401B7A2CC700B70FD6 /* PreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +249,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB535501B86509B00B70FD6 /* RsyncTaskGenerator.swift in Sources */,
+				CBB5353F1B7A2CC700B70FD6 /* PreferencesViewController.swift in Sources */,
+				CBB535461B7BC36A00B70FD6 /* Defaults.swift in Sources */,
 				CBEC642A1B761C36006CB913 /* AppDelegate.swift in Sources */,
+				CBB5354A1B7BCA9700B70FD6 /* Extensions.swift in Sources */,
+				CBEC644C1B767230006CB913 /* Backup.swift in Sources */,
+				CBB535431B7A316100B70FD6 /* LogViewController.swift in Sources */,
+				CBB535321B7A1BBE00B70FD6 /* Preferences.swift in Sources */,
+				CBB5352D1B77BC7400B70FD6 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +448,7 @@
 				CBEC64401B761C36006CB913 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBEC64411B761C36006CB913 /* Build configuration list for PBXNativeTarget "Lr backupTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +457,7 @@
 				CBEC64431B761C36006CB913 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

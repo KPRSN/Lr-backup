@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Preferences" customModule="Lr_backup" customModuleProvider="target">
+            <connections>
+                <outlet property="toolbar" destination="VKj-Vd-a2h" id="u4W-P3-prb"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="D501E2A9-08C9-49F0-82B6-9D20BE525DBA" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="VKj-Vd-a2h">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="3D342A49-3621-4F6C-B78C-0BE60A41D3EE" explicitItemIdentifier="preferences" label="Preferences" paletteLabel="Preferences" tag="-1" image="NSAdvanced" selectable="YES" id="HYd-wk-91R">
+                        <connections>
+                            <action selector="showPreferences:" target="-2" id="6EE-8l-1rh"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="4631EB90-B64F-4697-A173-9F78B0A285CA" explicitItemIdentifier="log" label="Log" paletteLabel="Log" tag="-1" image="NSInfo" selectable="YES" id="XJb-3W-sB3">
+                        <connections>
+                            <action selector="showLog:" target="-2" id="6W9-jZ-tGV"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="daP-zp-mJf"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="HYd-wk-91R"/>
+                    <toolbarItem reference="XJb-3W-sB3"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+    </objects>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSInfo" width="32" height="32"/>
+    </resources>
+</document>
