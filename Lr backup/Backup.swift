@@ -56,8 +56,8 @@ class Backup: NSObject {
 	// Backup task finished
 	func taskDidTerminate(sender: AnyObject?) {
 		// Close output pipes
-		tasks[0].standardOutput.fileHandleForReading.readabilityHandler = nil
-		tasks[0].standardError.fileHandleForReading.readabilityHandler = nil
+		tasks[0].standardOutput!.fileHandleForReading.readabilityHandler = nil
+		tasks[0].standardError!.fileHandleForReading.readabilityHandler = nil
 		
 		// Remove task
 		tasks.removeAtIndex(0)
@@ -78,21 +78,21 @@ class Backup: NSObject {
 			
 			// Pipe output
 			task.standardOutput = NSPipe()
-			task.standardOutput.fileHandleForReading.readabilityHandler = { (file: NSFileHandle!) -> Void in
+			task.standardOutput!.fileHandleForReading.readabilityHandler = { (file: NSFileHandle) -> Void in
 				let data: NSData = file.availableData
 				let output: NSString = NSString(data: data, encoding: NSUTF8StringEncoding)!
 				Logger.log(output as String)
-				println(output)
+				print(output)
 			}
 			
 			// Pipe error
 			task.standardError = NSPipe()
-			task.standardError.fileHandleForReading.readabilityHandler = { (file: NSFileHandle!) -> Void in
+			task.standardError!.fileHandleForReading.readabilityHandler = { (file: NSFileHandle) -> Void in
 				self.error = true
 				let data: NSData = file.availableData
 				let output: NSString = NSString(data: data, encoding: NSUTF8StringEncoding)!
 				Logger.error(output as String)
-				println(output)
+				print(output)
 			}
 			
 			task.launch()

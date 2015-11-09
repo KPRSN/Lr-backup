@@ -25,8 +25,8 @@ class RsyncTaskGenerator {
 		let task = rsyncTask()
 		
 		// Exclude lightroom files
-		task.arguments.append("--exclude=*.lrcat")
-		task.arguments.append("--exclude=*.lrdata")
+		task.arguments!.append("--exclude=*.lrcat")
+		task.arguments!.append("--exclude=*.lrdata")
 		
 		return task
 	}
@@ -35,9 +35,9 @@ class RsyncTaskGenerator {
 		let task = rsyncTask()
 		
 		// Exclude everything but *.lrcat
-		task.arguments.append("--include=*.lrcat")
-		task.arguments.append("--include=*/")
-		task.arguments.append("--exclude=*")
+		task.arguments!.append("--include=*.lrcat")
+		task.arguments!.append("--include=*/")
+		task.arguments!.append("--exclude=*")
 		
 		return task
 	}
@@ -46,9 +46,9 @@ class RsyncTaskGenerator {
 		let task = rsyncTask()
 		
 		// Exclude everything but *.lrdata
-		task.arguments.append("--include=*.lrdata")
-		task.arguments.append("--include=*/")
-		task.arguments.append("--exclude=*")
+		task.arguments!.append("--include=*.lrdata")
+		task.arguments!.append("--include=*/")
+		task.arguments!.append("--exclude=*")
 		
 		return task
 	}
@@ -60,17 +60,17 @@ class RsyncTaskGenerator {
 		task.arguments = ["-abvh"]
 		
 		if Defaults.compression! {
-			task.arguments.append("-z")
+			task.arguments!.append("-z")
 		}
 		
 		if Defaults.ssh! {
-			task.arguments.append("-e ssh")
-			task.arguments.append(Defaults.source!)
-			task.arguments.append(Defaults.user! + "@" + Defaults.host! + ":" + Defaults.destination!)
+			task.arguments!.append("-e ssh")
+			task.arguments!.append(Defaults.source!)
+			task.arguments!.append(Defaults.user! + "@" + Defaults.host! + ":" + Defaults.destination!)
 		}
 		else {
-			task.arguments.append(Defaults.source!)
-			task.arguments.append(Defaults.destination!)
+			task.arguments!.append(Defaults.source!)
+			task.arguments!.append(Defaults.destination!)
 		}
 		
 		return task

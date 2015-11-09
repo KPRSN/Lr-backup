@@ -32,7 +32,7 @@ class LogViewController: NSViewController {
 	
 	// Full log update from file
 	func updateLog() {
-		let logstring = String(contentsOfFile: Logger.fileDir.path!, encoding: NSUTF8StringEncoding, error: nil)
+		let logstring = try? String(contentsOfFile: Logger.fileDir.path!, encoding: NSUTF8StringEncoding)
 		if logstring != nil {
 			logTextView.string = logstring
 			logTextView.scrollToEndOfDocument(self)
@@ -49,8 +49,11 @@ class LogViewController: NSViewController {
 	
 	// Clear log file
     @IBAction func clear(sender: NSButton) {
-		// Delete file
-		NSFileManager.defaultManager().removeItemAtURL(Logger.fileDir, error: nil)
+		do {
+			// Delete file
+			try NSFileManager.defaultManager().removeItemAtURL(Logger.fileDir)
+		} catch _ {
+		}
 		updateLog()
 	}
 	

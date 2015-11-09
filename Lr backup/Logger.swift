@@ -73,7 +73,7 @@ class Logger {
 	static func write(messages: Array<String>) {
 		// Create dir/log if it doesn't exist
 		if (createDirectory() && createFile()) {
-			let filehandle = NSFileHandle(forWritingToURL: fileDir, error: nil)
+			let filehandle = try? NSFileHandle(forWritingToURL: fileDir)
 			filehandle?.seekToEndOfFile()
 			
 			var outstring = ""
@@ -92,7 +92,12 @@ class Logger {
 	// Create application support directory if it doesn't exist
 	static func createDirectory() -> Bool {
 		if (!NSFileManager.defaultManager().fileExistsAtPath(appDir.path!)) {
-			return NSFileManager.defaultManager().createDirectoryAtURL(appDir, withIntermediateDirectories: true, attributes: nil, error: nil)
+			do {
+				try NSFileManager.defaultManager().createDirectoryAtURL(appDir, withIntermediateDirectories: true, attributes: nil)
+				return true
+			} catch _ {
+				return false
+			}
 		}
 		return true
 	}
@@ -107,7 +112,7 @@ class Logger {
 	
 	// Check if a string is whitespace only
 	static func isWhitespace(message: String) -> Bool {
-		if count(message.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) <= 0 {
+		if message.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).characters.count <= 0 {
 			return true
 		}
 		return false
