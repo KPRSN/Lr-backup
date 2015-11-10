@@ -71,10 +71,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 		
 		running = false
 		statusItem.menu = menu
-		
 		updateStatus()
-		
-		// Add menu close listener
 		menu.delegate = self
 	}
 
@@ -121,7 +118,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	// Open preferences pane
 	func openPreferences(sender: AnyObject?) {
 		preferences.showWindow(self)
-		preferences.window?.makeKeyAndOrderFront(self)
+		NSApp.activateIgnoringOtherApps(true)
 	}
 	
 	// Quit the application
