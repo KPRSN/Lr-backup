@@ -33,16 +33,18 @@ class StatusIcon: NSObject {
 	}
 	
 	func idle() {
-		button.image = NSImage(named: "Icon-idle")
 		animationTimer?.invalidate()
+		button.image = NSImage(named: "Icon-idle")
 	}
 	
 	func running() {
+		animationTimer?.invalidate()
 		button.image = NSImage(named: "Icon-running1")
 		animationTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "updateRunning", userInfo: nil, repeats: true)
 	}
 	
 	func error() {
+		animationTimer?.invalidate()
 		button.image = NSImage(named: "Icon-error")
 		animationTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateError", userInfo: nil, repeats: true)
 	}
