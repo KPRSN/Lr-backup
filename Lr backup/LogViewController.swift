@@ -22,12 +22,6 @@ class LogViewController: NSViewController {
 		logScrollView.hasVerticalScroller = true
 		logScrollView.horizontalScroller?.hidden = true
 		logScrollView.verticalScroller?.hidden = true
-		
-		// Update from file
-		updateLog()
-		
-		// Observe further log updates
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("logUpdatedNotification:"), name: "LogUpdatedNotification", object: nil)
     }
 	
 	// Full log update from file
@@ -62,4 +56,16 @@ class LogViewController: NSViewController {
 		// Open log in default text editor
 		NSWorkspace.sharedWorkspace().openURL(Logger.fileDir)
 	}
+	
+	override func viewWillAppear() {
+		updateLog()
+		
+		// Observe further log updates
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("logUpdatedNotification:"), name: "LogUpdatedNotification", object: nil)
+	}
+	
+	override func viewDidDisappear() {
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+
 }

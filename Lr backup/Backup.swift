@@ -105,6 +105,7 @@ class Backup: NSObject {
 			else {
 				// Backup successful
 				Defaults.lastBackup = NSDate()
+				Logger.succeeded()
 			}
 			
 			running = false
