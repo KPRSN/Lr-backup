@@ -85,6 +85,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 		// Set icon status
 		if backup.running {
 			statusIcon.running()
+			status = backup.status
 		}
 		else {
 			if backup.error {
@@ -131,9 +132,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	
 	// Clear errors when the menu closes
 	func menuDidClose(menu: NSMenu) {
-		// Show normal status (last backup)
-		updateStatus()
-		statusIcon.idle()
+		if !running {
+			// Show normal status (last backup)
+			updateStatus()
+			statusIcon.idle()
+		}
 	}
 	
 	// Update last backup status
