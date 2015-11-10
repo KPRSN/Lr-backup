@@ -61,6 +61,15 @@ class PreferencesViewController: NSViewController {
 	
 	// Save default settings
 	func saveDefaults() {
+		// Reset last backup date if source, destination or host have been changed
+		if (Defaults.source != source.stringValue ||
+			Defaults.destination != destination.stringValue ||
+			Defaults.ssh != Bool(ssh.state) ||
+			Defaults.host != host.stringValue ||
+			Defaults.user != user.stringValue) {
+				Defaults.lastBackup = nil
+		}
+		
 		Defaults.source = source.stringValue
 		Defaults.destination = destination.stringValue
 		Defaults.ssh = Bool(ssh.state)

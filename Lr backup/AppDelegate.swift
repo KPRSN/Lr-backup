@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	let backup = Backup()
 	var statusIcon: StatusIcon!
 	
+	// Show animation, error message and cancel option while running
 	var running: Bool = false {
 		didSet {
 			if !running {
@@ -26,6 +27,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 			}
 			else {
 				self.backupMenu.title = "Cancel"
+				statusIcon.running()
+				status = backup.status
+			}
+		}
+	}
+	
+	// Show the correct animation and error message after an error
+	var error: Bool = false {
+		didSet {
+			if error {
+				statusIcon.error()
+				status = backup.status
+			}
+			else {
+				statusIcon.idle()
 			}
 		}
 	}
@@ -38,10 +54,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 			// Print last line only
 			self.statusMenu.title = newValue
 		}
-	}
-	
-	override init () {
-		super.init()
 	}
 
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -80,23 +92,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	}
 	
 	func backupRunningNotification(notification: NSNotification) {
+		error = backup.error
 		running = backup.running
-		
-		// Set icon status
-		if backup.running {
-			statusIcon.running()
-			status = backup.status
-		}
-		else {
-			if backup.error {
-				statusIcon.error()
-				status = backup.status
-			}
-			else {
-				statusIcon.idle()
-				updateStatus()
-			}
-		}
 	}
 	
 	// Run backup
@@ -130,12 +127,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 		NSApplication.sharedApplication().terminate(self)
 	}
 	
+	// Update status if needed
+	func menuWillOpen(menu: NSMenu) {
+		if !(running || error) {
+			updateStatus()
+		}
+	}
+	
 	// Clear errors when the menu closes
 	func menuDidClose(menu: NSMenu) {
 		if !running {
 			// Show normal status (last backup)
-			updateStatus()
-			statusIcon.idle()
+			error = false
 		}
 	}
 	
