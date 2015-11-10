@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "mac",
-      "scale" : "1x",
-      "filename" : "StatusBarButtonImage@2x.png"
+      "filename" : "MenuBarIcon-error.pdf",
+      "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "scale" : "2x",
-      "filename" : "StatusBarButtonImage@2x-1.png"
+      "filename" : "MenuBarIcon-error-1.pdf",
+      "scale" : "2x"
     }
   ],
   "info" : {

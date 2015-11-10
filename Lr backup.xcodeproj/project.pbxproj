@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB32C42B1BF26E4000EAF000 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32C42A1BF26E4000EAF000 /* StatusIcon.swift */; };
 		CBB5352D1B77BC7400B70FD6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5352C1B77BC7400B70FD6 /* Logger.swift */; };
 		CBB535321B7A1BBE00B70FD6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB535301B7A1BBE00B70FD6 /* Preferences.swift */; };
 		CBB535331B7A1BBE00B70FD6 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB535311B7A1BBE00B70FD6 /* Preferences.xib */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB32C42A1BF26E4000EAF000 /* StatusIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusIcon.swift; sourceTree = "<group>"; };
 		CBB5352C1B77BC7400B70FD6 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CBB535301B7A1BBE00B70FD6 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		CBB535311B7A1BBE00B70FD6 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				CBEC64291B761C36006CB913 /* AppDelegate.swift */,
+				CB32C42A1BF26E4000EAF000 /* StatusIcon.swift */,
 				CBEC644B1B767230006CB913 /* Backup.swift */,
 				CBB5354F1B86509B00B70FD6 /* RsyncTaskGenerator.swift */,
 				CBB5352C1B77BC7400B70FD6 /* Logger.swift */,
@@ -253,6 +256,7 @@
 			files = (
 				CBB535501B86509B00B70FD6 /* RsyncTaskGenerator.swift in Sources */,
 				CBB5353F1B7A2CC700B70FD6 /* PreferencesViewController.swift in Sources */,
+				CB32C42B1BF26E4000EAF000 /* StatusIcon.swift in Sources */,
 				CBB535461B7BC36A00B70FD6 /* Defaults.swift in Sources */,
 				CBEC642A1B761C36006CB913 /* AppDelegate.swift in Sources */,
 				CBB5354A1B7BCA9700B70FD6 /* Extensions.swift in Sources */,

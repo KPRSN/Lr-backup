@@ -74,6 +74,15 @@ import Cocoa
 		}
 	}
 	
+	static var lastBackup: NSDate? {
+		get {
+			return defaults.objectForKey("lastBackup") as? NSDate
+		}
+		set {
+			defaults.setObject(newValue, forKey: "lastBackup")
+		}
+	}
+	
 	static var firstRun: Bool? {
 		get {
 			return defaults.objectForKey("firstRun") as? Bool
@@ -91,6 +100,7 @@ import Cocoa
 		Defaults.user = ""
 		Defaults.lrpreviews = true
 		Defaults.compression = false
+		Defaults.lastBackup = nil
 		Defaults.firstRun = false
 	}
 	

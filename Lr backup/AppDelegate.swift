@@ -9,7 +9,7 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	@IBOutlet weak var window: NSWindow!
 	
 	let preferences = Preferences(windowNibName: "Preferences")
@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	let statusMenu = NSMenuItem(title: "Lr backup", action: nil, keyEquivalent: "")
 	let backupMenu = NSMenuItem(title: "", action: Selector("runBackup:"), keyEquivalent: "")
 	let backup = Backup()
+	var statusIcon: StatusIcon!
 	
 	var running: Bool = false {
 		didSet {
@@ -28,6 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			}
 		}
 	}
+	
 	var status: String {
 		get {
 			return self.statusMenu.title
@@ -43,8 +45,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
+		// Assign icon
 		if let button = statusItem.button {
-			button.image = NSImage(named: "StatusBarButtonImage")
+			statusIcon = StatusIcon(button: button)
 		}
 
 		// First run setup
@@ -68,6 +71,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		running = false
 		statusItem.menu = menu
+		
+		updateStatus()
+		
+		// Add menu close listener
+		menu.delegate = self
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification) {
@@ -76,7 +84,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	func backupRunningNotification(notification: NSNotification) {
 		running = backup.running
-		status = backup.status
+		
+		// Set icon status
+		if backup.running {
+			statusIcon.running()
+		}
+		else {
+			if backup.error {
+				statusIcon.error()
+				status = backup.status
+			}
+			else {
+				statusIcon.idle()
+				updateStatus()
+			}
+		}
 	}
 	
 	// Run backup
@@ -106,6 +128,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func quit(sender: AnyObject?) {
 		backup.cancel()
 		NSApplication.sharedApplication().terminate(self)
+	}
+	
+	// Clear errors when the menu closes
+	func menuDidClose(menu: NSMenu) {
+		// Show normal status (last backup)
+		updateStatus()
+		statusIcon.idle()
+	}
+	
+	// Update last backup status
+	func updateStatus() {
+		var dateString = "Never"
+		
+		if (Defaults.lastBackup != nil) {
+			let formatter = NSDateFormatter()
+			formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+			formatter.dateStyle = NSDateFormatterStyle.FullStyle
+			dateString = formatter.stringFromDate(Defaults.lastBackup!)
+		}
+		
+		status = "Last backup: " + dateString
 	}
 }
 
