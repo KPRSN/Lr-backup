@@ -82,7 +82,6 @@ class Backup: NSObject {
 				let data: NSData = file.availableData
 				let output: NSString = NSString(data: data, encoding: NSUTF8StringEncoding)!
 				Logger.log(output as String)
-				print(output)
 			}
 			
 			// Pipe error
@@ -92,7 +91,6 @@ class Backup: NSObject {
 				let data: NSData = file.availableData
 				let output: NSString = NSString(data: data, encoding: NSUTF8StringEncoding)!
 				Logger.error(output as String)
-				print(output)
 			}
 			
 			task.launch()
