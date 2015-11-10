@@ -118,6 +118,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 	// Open preferences pane
 	func openPreferences(sender: AnyObject?) {
 		preferences.showWindow(self)
+		preferences.toolbar.selectedItemIdentifier = "preferences"
+		preferences.showPreferences(self)
 		NSApp.activateIgnoringOtherApps(true)
 	}
 	
