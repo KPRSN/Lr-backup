@@ -14,18 +14,15 @@ class PreferencesViewController: NSViewController {
 			if enableSSH > 0 {
 				host.enabled = true
 				user.enabled = true
-				password.enabled = true
+				
 				hostDesc.textColor = NSColor.blackColor()
 				userDesc.textColor = NSColor.blackColor()
-				passwordDesc.textColor = NSColor.blackColor()
 			}
 			else {
 				host.enabled = false
 				user.enabled = false
-				password.enabled = false
 				hostDesc.textColor = NSColor.grayColor()
 				userDesc.textColor = NSColor.grayColor()
-				passwordDesc.textColor = NSColor.grayColor()
 			}
 		}
 	}
@@ -36,14 +33,12 @@ class PreferencesViewController: NSViewController {
 	@IBOutlet weak var ssh: NSButton!
 	@IBOutlet weak var host: NSTextField!
 	@IBOutlet weak var user: NSTextField!
-	@IBOutlet weak var password: NSSecureTextField!
 	
 	@IBOutlet weak var lrpreviews: NSButton!
 	@IBOutlet weak var compression: NSButton!
 	
 	@IBOutlet weak var hostDesc: NSTextField!
 	@IBOutlet weak var userDesc: NSTextField!
-	@IBOutlet weak var passwordDesc: NSTextField!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,5 +72,10 @@ class PreferencesViewController: NSViewController {
 	
 	@IBAction func sshClicked(sender: NSButton?) {
 		enableSSH = ssh.state
+	}
+	
+	@IBAction func sshHelp(sender: NSButton?) {
+		// Open up a help website for setting up SSH authentication
+		NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys")!)
 	}
 }
