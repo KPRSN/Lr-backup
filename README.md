@@ -8,10 +8,12 @@ Lr-backup is a small application that lives in the status bar of OS X, making it
 * Lightroom library files (.lrcat)
 * Lightroom preview files (.lrdata) (optional)
 
-# How does it work?
-Lr-backup is based on the widely used file transfer utility rsync for backing up both locally and remotely. Just set up the source and destination of your backup, and you're good to go. In order to back up to a remote machine user authentication via ssh keys is required. Please see https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys for more information on how to set it all up.
+# How does it work then?
+Lr-backup is based on the widely used file transfer utility rsync (not to be confused with NSYNC) for backing up both locally and remotely. Just set up the source and destination of your backup, and you're good to go. 
 
-![alt text](Screenshots/Preferences.png "Lr-backup in the status bar/menu bar")
+In order to back up to a remote machine user authentication via ssh keys is required. Please see https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys for more information on how to set it all up.
+
+![alt text](Screenshots/Preferences.png "Preferences window in action")
 
 # License
 The MIT License (MIT)
