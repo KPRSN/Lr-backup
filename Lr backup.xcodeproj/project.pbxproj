@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB32C42B1BF26E4000EAF000 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32C42A1BF26E4000EAF000 /* StatusIcon.swift */; };
+		CB32C42D1BF3551200EAF000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB32C42C1BF3551200EAF000 /* Images.xcassets */; };
 		CBB5352D1B77BC7400B70FD6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5352C1B77BC7400B70FD6 /* Logger.swift */; };
 		CBB535321B7A1BBE00B70FD6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB535301B7A1BBE00B70FD6 /* Preferences.swift */; };
 		CBB535331B7A1BBE00B70FD6 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB535311B7A1BBE00B70FD6 /* Preferences.xib */; };
@@ -19,7 +20,6 @@
 		CBB5354A1B7BCA9700B70FD6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB535491B7BCA9700B70FD6 /* Extensions.swift */; };
 		CBB535501B86509B00B70FD6 /* RsyncTaskGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5354F1B86509B00B70FD6 /* RsyncTaskGenerator.swift */; };
 		CBEC642A1B761C36006CB913 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC64291B761C36006CB913 /* AppDelegate.swift */; };
-		CBEC642C1B761C36006CB913 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEC642B1B761C36006CB913 /* Images.xcassets */; };
 		CBEC642F1B761C36006CB913 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC642D1B761C36006CB913 /* MainMenu.xib */; };
 		CBEC643B1B761C36006CB913 /* Lr_backupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC643A1B761C36006CB913 /* Lr_backupTests.swift */; };
 		CBEC644C1B767230006CB913 /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC644B1B767230006CB913 /* Backup.swift */; };
@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		CB32C42A1BF26E4000EAF000 /* StatusIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusIcon.swift; sourceTree = "<group>"; };
+		CB32C42C1BF3551200EAF000 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Lr backup/Images.xcassets"; sourceTree = "<group>"; };
 		CBB5352C1B77BC7400B70FD6 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CBB535301B7A1BBE00B70FD6 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		CBB535311B7A1BBE00B70FD6 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		CBEC64241B761C36006CB913 /* Lr backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lr backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEC64281B761C36006CB913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBEC64291B761C36006CB913 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBEC642B1B761C36006CB913 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CBEC642E1B761C36006CB913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CBEC64341B761C36006CB913 /* Lr backupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lr backupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEC64391B761C36006CB913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				CBEC64261B761C36006CB913 /* Lr backup */,
+				CB32C42C1BF3551200EAF000 /* Images.xcassets */,
 				CBEC64371B761C36006CB913 /* Lr backupTests */,
 				CBEC64251B761C36006CB913 /* Products */,
 			);
@@ -118,7 +119,6 @@
 				CBB535451B7BC36A00B70FD6 /* Defaults.swift */,
 				CBB535491B7BCA9700B70FD6 /* Extensions.swift */,
 				CBB5353C1B7A23EB00B70FD6 /* Preferences */,
-				CBEC642B1B761C36006CB913 /* Images.xcassets */,
 				CBEC642D1B761C36006CB913 /* MainMenu.xib */,
 				CBEC64271B761C36006CB913 /* Supporting Files */,
 			);
@@ -232,8 +232,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBEC642C1B761C36006CB913 /* Images.xcassets in Resources */,
 				CBB535331B7A1BBE00B70FD6 /* Preferences.xib in Resources */,
+				CB32C42D1BF3551200EAF000 /* Images.xcassets in Resources */,
 				CBB535441B7A316100B70FD6 /* LogViewController.xib in Resources */,
 				CBEC642F1B761C36006CB913 /* MainMenu.xib in Resources */,
 				CBB535401B7A2CC700B70FD6 /* PreferencesViewController.xib in Resources */,
