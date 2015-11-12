@@ -23,24 +23,32 @@ class Backup: NSObject {
 	
 	func run() {
 		if !running {
-			error = false
-			status = "Running"
-			running = true
-			
-			Logger.log("Backup started")
-			
-			// Generate backup tasks
-			tasks = RsyncTaskGenerator.generate()
-			
-			// Notify on task termination
-			NSNotificationCenter.defaultCenter().addObserver(
-				self,
-				selector: Selector("taskDidTerminate:"),
-				name: NSTaskDidTerminateNotification,
-				object: nil)
-			
-			// Start backup
-			nextTask()
+			if validatePreferences() {
+				error = false
+				status = "Running"
+				running = true
+				
+				Logger.log("Backup started")
+				
+				// Generate backup tasks
+				tasks = RsyncTaskGenerator.generate()
+				
+				// Notify on task termination
+				NSNotificationCenter.defaultCenter().addObserver(
+					self,
+					selector: Selector("taskDidTerminate:"),
+					name: NSTaskDidTerminateNotification,
+					object: nil)
+				
+				// Start backup
+				nextTask()
+			}
+			else {
+				// Validation failed
+				status = Logger.failed()
+				error = true
+				running = false
+			}
 		}
 	}
 	
@@ -110,5 +118,40 @@ class Backup: NSObject {
 			
 			running = false
 		}
+	}
+	
+	// Validate backup preferences
+	func validatePreferences() -> Bool {
+		// Check for missing fields/preferences
+		if (Defaults.source?.characters.count < 1) {
+			Logger.error("Source missing")
+			return false
+		}
+		
+		if (Defaults.destination?.characters.count < 1) {
+			Logger.error("Destination missing")
+			return false
+		}
+		
+		if (Defaults.ssh!) {
+			if (Defaults.host?.characters.count < 1) {
+				Logger.error("SSH host misssing")
+				return false
+			}
+			
+			if (Defaults.user?.characters.count < 1) {
+				Logger.error("SSH user missing")
+				return false
+			}
+		}
+		
+		// Check for recursive source/destination
+		if (!Defaults.ssh!) {
+			if (Defaults.destination!.hasPrefix(Defaults.source!)) {
+				Logger.error("Recursive backup: Destination is part of the source")
+				return false
+			}
+		}
+		return true
 	}
 }
