@@ -35,10 +35,15 @@ class LogViewController: NSViewController {
 			logTextView.string = ""
 		}
 	}
-	
+
 	// Update log window continously
 	func logUpdatedNotification(notification: NSNotification) {
-		logTextView.string = logTextView.string! + (notification.object as! String)
+		// Synchronize with main queue
+		dispatch_async(dispatch_get_main_queue(), {
+			self.logTextView.textStorage?.beginEditing()
+			self.logTextView.textStorage?.appendAttributedString(NSAttributedString(string: notification.object as! String))
+			self.logTextView.textStorage?.endEditing()
+		})
 	}
 	
 	// Clear log file
