@@ -65,6 +65,15 @@ import Cocoa
 		}
 	}
 	
+	static var hiddenFiles: Bool? {
+		get {
+			return defaults.objectForKey("hiddenFiles") as? Bool
+		}
+		set {
+			defaults.setObject(newValue, forKey: "hiddenFiles")
+		}
+	}
+	
 	static var compression: Bool? {
 		get {
 			return defaults.objectForKey("compression") as? Bool
@@ -99,6 +108,7 @@ import Cocoa
 		Defaults.host = ""
 		Defaults.user = ""
 		Defaults.lrpreviews = true
+		Defaults.hiddenFiles = false
 		Defaults.compression = false
 		Defaults.lastBackup = nil
 		Defaults.firstRun = false

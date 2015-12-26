@@ -73,6 +73,10 @@ class RsyncTaskGenerator {
 			task.arguments!.append(Defaults.destination!)
 		}
 		
+		if !Defaults.hiddenFiles! {
+			task.arguments!.append("--exclude=.*")
+		}
+		
 		return task
 	}
 }

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesViewController" customModule="Lr_backup" customModuleProvider="target">
             <connections>
                 <outlet property="compression" destination="eoG-YT-2Ce" id="GPb-4X-cou"/>
                 <outlet property="destination" destination="YWL-My-Y1x" id="wbi-q4-c4i"/>
+                <outlet property="hiddenFiles" destination="Tam-XM-p2d" id="Dxw-IF-hnt"/>
                 <outlet property="host" destination="HQz-UF-ieK" id="tZw-52-Roj"/>
                 <outlet property="hostDesc" destination="yve-nG-2Ms" id="i7J-8Q-EiD"/>
                 <outlet property="lrpreviews" destination="Hwm-f3-tw6" id="MPA-HE-Fdz"/>
@@ -107,22 +109,6 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hwm-f3-tw6">
-                    <rect key="frame" x="18" y="18" width="126" height="18"/>
-                    <animations/>
-                    <buttonCell key="cell" type="check" title="Include previews" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="k0B-v4-SP0">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
-                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-YT-2Ce">
-                    <rect key="frame" x="198" y="18" width="85" height="18"/>
-                    <animations/>
-                    <buttonCell key="cell" type="check" title="Compress" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ykW-V6-uVw">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTg-FD-PON">
                     <rect key="frame" x="437" y="61" width="25" height="25"/>
                     <animations/>
@@ -134,7 +120,52 @@
                         <action selector="sshHelp:" target="-2" id="2JH-WW-0lR"/>
                     </connections>
                 </button>
+                <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-tK-kgH">
+                    <rect key="frame" x="20" y="20" width="440" height="14"/>
+                    <subviews>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="Hwm-f3-tw6">
+                            <rect key="frame" x="-2" y="-2" width="124" height="18"/>
+                            <animations/>
+                            <buttonCell key="cell" type="check" title="Include previews" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="k0B-v4-SP0">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="Tam-XM-p2d">
+                            <rect key="frame" x="170" y="-2" width="140" height="18"/>
+                            <animations/>
+                            <buttonCell key="cell" type="check" title="Include hidden files" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ag7-Hw-AtU">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="eoG-YT-2Ce">
+                            <rect key="frame" x="358" y="-2" width="84" height="18"/>
+                            <animations/>
+                            <buttonCell key="cell" type="check" title="Compress" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ykW-V6-uVw">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
             </subviews>
+            <constraints>
+                <constraint firstItem="9cv-tK-kgH" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="64K-qf-rqy"/>
+                <constraint firstAttribute="bottom" secondItem="9cv-tK-kgH" secondAttribute="bottom" constant="20" id="EEv-RQ-g3d"/>
+                <constraint firstAttribute="trailing" secondItem="9cv-tK-kgH" secondAttribute="trailing" constant="20" id="h97-eB-ZqA"/>
+            </constraints>
             <animations/>
         </customView>
     </objects>

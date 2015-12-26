@@ -35,6 +35,7 @@ class PreferencesViewController: NSViewController {
 	@IBOutlet weak var user: NSTextField!
 	
 	@IBOutlet weak var lrpreviews: NSButton!
+	@IBOutlet weak var hiddenFiles: NSButton!
 	@IBOutlet weak var compression: NSButton!
 	
 	@IBOutlet weak var hostDesc: NSTextField!
@@ -54,6 +55,7 @@ class PreferencesViewController: NSViewController {
 		host.stringValue = Defaults.host!
 		user.stringValue = Defaults.user!
 		lrpreviews.state = Int(Defaults.lrpreviews!)
+		hiddenFiles.state = Int(Defaults.hiddenFiles!)
 		compression.state = Int(Defaults.compression!)
 		
 		enableSSH = ssh.state
@@ -76,6 +78,7 @@ class PreferencesViewController: NSViewController {
 		Defaults.host = host.stringValue
 		Defaults.user = user.stringValue
 		Defaults.lrpreviews = Bool(lrpreviews.state)
+		Defaults.hiddenFiles = Bool(hiddenFiles.state)
 		Defaults.compression = Bool(compression.state)
 	}
 	
