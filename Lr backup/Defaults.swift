@@ -9,7 +9,12 @@
 import Cocoa
 
  class Defaults {
-	static var defaults = NSUserDefaults.standardUserDefaults()
+	#if DEBUG
+		static var defaults = NSUserDefaults(suiteName: "LrBackup-test")!
+	#else
+		static var defaults = NSUserDefaults.standardUserDefaults()
+	#endif
+	
 	
 	static var source: String? {
 		get {

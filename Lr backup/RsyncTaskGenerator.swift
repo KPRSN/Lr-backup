@@ -56,6 +56,9 @@ class RsyncTaskGenerator {
 	class func rsyncTask() -> NSTask {
 		let task = NSTask()
 		
+		
+//		[task setEnvironment:@{@"LC_ALL" : @"en_US.UTF-8"}];
+		task.environment = ["LC_ALL" : " "]
 		task.launchPath = "/usr/bin/rsync"
 		task.arguments = ["-abvh"]
 		
